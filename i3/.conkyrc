@@ -1,0 +1,110 @@
+### Conky configuration file
+## Output is printed to the console -> i3bar
+
+# No output to X
+out_to_x no
+
+# Don't create own window to draw
+own_window no
+
+# Print everything to draw
+out_to_console yes
+
+# Use double buffering (reduces flickering) 
+double_buffer yes
+
+# Set to yes if you want Conky to be forked in the background
+background no
+
+# Update interval in seconds
+update_interval 1.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address.
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer none 
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar
+
+[
+
+# Kernelversion with arch
+#{
+#    "full_text" : "$kernel on $machine"
+#},
+
+# Free space on root partition (Mountpoint: /)
+{
+    "full_text" : " ${fs_free /}"
+},
+
+# Free space on home partition (Mountoint: /home)
+{
+    "full_text" : " ${fs_free /home}"
+},
+
+# Free space on my external hard drive (Mountpoint: /media/western)
+${if_mounted /media/western}
+    {
+        "full_text" : " ${fs_free /media/western}"
+    },
+${endif}
+
+# Show cpu load in percent
+{
+    "full_text" : " ${cpu cpu0}%" , "color" : "\#8AE234"
+},
+
+# Show connection type (and info) if possible
+{
+    "full_text" :
+    ${if_match "$gw_iface"=="wlp6s0"}" ${wireless_essid wlp6s0} ${wireless_link_qual_perc wlp6s0}% ${addr wlp6s0}" ,  "color" : "\#FFFFFF"${else}
+        ${if_match "$gw_iface"=="enp3s0"}" connected: ${addr enp3s0}" , "color" : "\#FFFFFF"${else}
+            "Network Unavailable " , "color" : "\#FF173E"
+        ${endif}
+    ${endif}
+},
+
+# Show sound volume (using ponymix) and artist - track
+{
+    "full_text" : "  ${exec ponymix get-volume}% ${mpd_artist 10} - ${mpd_title 20}" , "color" : "\#E57C25"
+},
+
+# Show battery status for BAT1 (mode percentage remaining_time)
+${if_existing /sys/class/power_supply/BAT1}
+    {
+        "full_text" : "${battery_short BAT1} ${battery_time BAT1}" , "color" :
+            ${if_match "${battery_percent BAT1}"<="10"}"\#C73200"${else}
+                "\#9933CC"
+            ${endif}
+    },
+${endif}
+
+# Show Date and Time
+{
+    "full_text" : "${time %a %d-%b-%Y} ${time %H:%M:%S}"
+}
+
+],
