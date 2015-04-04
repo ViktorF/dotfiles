@@ -18,11 +18,17 @@ udiskie --tray &
 # Start notifications
 dunst &
 
+# Start redshift (a colorfilter) with my coordinates
+redshift-gtk -l 48.398261:15.693650 &
+
 # Start the NetworkManager applet
 nm-applet &
 
-# Start redshift (a colorfilter) with my coordinates
-redshift-gtk -l 48.398261:15.693650 &
+# Load Xresources (terminal configuration)
+xrdb ~/.Xresources
+
+# Start compton (shadows and stuff)
+compton --config ~/.compton.conf -b
 
 # Set background image
 feh --bg-scale ~/.bg.png
