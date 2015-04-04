@@ -8,7 +8,7 @@ Used Programs
 |                                     Name                                     |               Description               |                                       Additional information                                       |
 |:----------------------------------------------------------------------------:|:---------------------------------------:|:--------------------------------------------------------------------------------------------------:|
 |                           [zsh](http://www.zsh.org)                          |                  Shell                  |                                                                                                    |
-|         [xfce4-terminal](http://git.xfce.org/apps/xfce4-terminal/)           |              Terminal emulator          |                                                                              |
+|         [rxvt-unicode](http://software.schmorp.de/pkg/rxvt-unicode)           |              Terminal emulator          |                                                                              |
 |                     [i3](https://github.com/Airblader/i3)                    |              Window manager             |                                     Modified i3wm by Airblader                                     |
 |                     [conky](http://conky.sourceforge.net)                    |                Statusbar                |                It's actually a system monitoring tool but it can be used with i3bar                |
 |                 [Rofi](https://davedavenport.github.io/rofi)                 |           Application launcher          |                                                                                                    |

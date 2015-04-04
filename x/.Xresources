@@ -1,0 +1,67 @@
+urxvt*font:             xft:Inconsolata:size=11
+!urxvt*font:             xft:Droid Sans Mono:size=10
+URxvt.letterSpace: -1
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*matcher.button:   1
+urxvt.transparent:    false
+urxvt*allow_bold:    true
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+!URxvt*geometry: 85x11
+URxvt*fading:        0
+URxvt*tintColor:     #ffffff
+URxvt*shading:        0
+URxvt*inheritPixmap:     False
+
+URxvt.perl-ext-common: clipboard,url-select,matcher
+URxvt.keysym.Mod4-c:   perl:clipboard:copy
+URxvt.keysym.Mod4-v:   perl:clipboard:paste
+URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.C-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: false
+URxvt.colorUL: #666666
+
+URxvt.tabbed.tabbar-fg: 0
+URxvt.tabbed.tabbar-bg: 4
+URxvt.tabbed.tab-fg: 0
+URxvt.tabbed.tab-bg: 9
+
+*cursorColor:   #048ac7
+*background:    #2d2d2d
+*foreground:    #c5c5c5
+
+! black
+*color0:        #2d2d2d
+*color8:        #666666
+
+! red
+*color1:        #ff005b
+*color9:        #ff00a0
+
+! green
+*color2:        #cee318
+*color10:       #ccff00
+
+! yellow
+*color3:        #ffe755
+*color11:       #ff9f00
+
+! blue
+*color4:        #048ac7
+*color12:       #48c6ff
+
+! magenta
+*color5:        #833c9f
+*color13:       #be67e1
+
+! cyan 
+*color6:        #0ac1cd
+*color14:       #63e7f0
+
+! white
+*color7:        #e5e5e5
+*color15:       #f3f3f3
