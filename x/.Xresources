@@ -1,11 +1,10 @@
-urxvt*font:             xft:Inconsolata:size=11
-!urxvt*font:             xft:Droid Sans Mono:size=10
+URxvt*font:             xft:Inconsolata:size=11
+!URxvt*font:             xft:Droid Sans Mono:size=10
 URxvt.letterSpace: -1
-urxvt*termName:         rxvt
-urxvt*scrollBar:        false
-urxvt*matcher.button:   1
-urxvt.transparent:    false
-urxvt*allow_bold:    true
+URxvt*termName:         rxvt
+URxvt*scrollBar:        false
+URxvt.transparent:    false
+URxvt*allow_bold:    true
 Xft*dpi:                96
 Xft*antialias:          true
 Xft*hinting:            full
@@ -16,13 +15,18 @@ URxvt*tintColor:     #ffffff
 URxvt*shading:        0
 URxvt*inheritPixmap:     False
 
-URxvt.perl-ext-common: clipboard,url-select,matcher
-URxvt.keysym.Mod4-c:   perl:clipboard:copy
-URxvt.keysym.Mod4-v:   perl:clipboard:paste
-URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
-URxvt.keysym.C-u: perl:url-select:select_next
-URxvt.url-select.launcher: /usr/bin/xdg-open
-URxvt.url-select.underline: false
+! Perl extensions
+URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
+URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.url-launcher:   /usr/bin/firefox
+URxvt.underlineURLs:  True
+URxvt*matcher.button:   1
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.M-c:     perl:clipboard:copy
+URxvt.keysym.M-v:     perl:clipboard:paste
+URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.colorUL: #666666
 
 URxvt.tabbed.tabbar-fg: 0
@@ -31,7 +35,7 @@ URxvt.tabbed.tab-fg: 0
 URxvt.tabbed.tab-bg: 9
 
 *cursorColor:   #048ac7
-*background:    #2d2d2d
+*background:    #222222
 *foreground:    #c5c5c5
 
 ! black
