@@ -25,13 +25,16 @@ redshift-gtk -l 48.398261:15.693650 &
 nm-applet &
 
 # Load Xresources (terminal configuration)
-xrdb ~/.Xresources
+xrdb -merge ~/.Xresources
 
 # Start compton (shadows and stuff)
 compton --config ~/.compton.conf -b
 
 # Set background image
 feh --bg-scale ~/.bg.png
+
+# Start rxvt-unicode deamon (lower resource usage and quicker startup for terminals)
+urxvtd --quiet --opendisplay --fork
 
 # Start the i3 window manager
 exec i3
