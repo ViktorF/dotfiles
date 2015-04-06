@@ -48,63 +48,53 @@ TEXT
 
 # JSON for i3bar
 
-[
-
+[ \
 # Kernelversion with arch
-#{
-#    "full_text" : "$kernel on $machine"
-#},
-
+#{ \
+#    "full_text" : "$kernel on $machine" \
+#}, \
 # Free space on root partition (Mountpoint: /)
-{
-    "full_text" : " ${fs_free /}"
-},
-
+{ \
+    "full_text" : " ${fs_free /}" \
+}, \
 # Free space on home partition (Mountoint: /home)
-{
-    "full_text" : " ${fs_free /home}"
-},
-
+{ \
+    "full_text" : " ${fs_free /home}" \
+}, \
 # Free space on my external hard drive (Mountpoint: /media/western)
-${if_mounted /media/western}
-    {
-        "full_text" : " ${fs_free /media/western}"
-    },
-${endif}
-
+${if_mounted /media/western} \
+    { \
+        "full_text" : " ${fs_free /media/western}" \
+    }, \
+${endif} \
 # Show cpu load in percent
-{
-    "full_text" : " ${cpu cpu0}%" , "color" : "\#8AE234"
-},
-
+{ \
+    "full_text" : " ${cpu cpu0}%" , "color" : "\#8AE234" \
+}, \
 # Show connection type (and info) if possible
-{
-    "full_text" :
-    ${if_match "$gw_iface"=="wlp6s0"}" ${wireless_essid wlp6s0} ${wireless_link_qual_perc wlp6s0}% ${addr wlp6s0}" ,  "color" : "\#FFFFFF"${else}
-        ${if_match "$gw_iface"=="enp3s0"}" connected: ${addr enp3s0}" , "color" : "\#FFFFFF"${else}
-            "Network Unavailable " , "color" : "\#FF173E"
-        ${endif}
-    ${endif}
-},
-
+{ \
+    "full_text" : \
+    ${if_match "$gw_iface"=="wlp6s0"}" ${wireless_essid wlp6s0} ${wireless_link_qual_perc wlp6s0}% ${addr wlp6s0}" ,  "color" : "\#FFFFFF"${else} \
+        ${if_match "$gw_iface"=="enp3s0"}" connected: ${addr enp3s0}" , "color" : "\#FFFFFF"${else} \
+            "Network Unavailable " , "color" : "\#FF173E" \
+        ${endif} \
+    ${endif} \
+}, \
 # Show sound volume (using ponymix) and artist - track
-{
-    "full_text" : "  ${exec ponymix get-volume}% ${mpd_artist 10} - ${mpd_title 20}" , "color" : "\#E57C25"
-},
-
+{ \
+    "full_text" : "  ${exec ponymix get-volume}% ${mpd_artist 10} - ${mpd_title 20}" , "color" : "\#E57C25" \
+}, \
 # Show battery status for BAT1 (mode percentage remaining_time)
-${if_existing /sys/class/power_supply/BAT1}
-    {
-        "full_text" : "${battery_short BAT1} ${battery_time BAT1}" , "color" :
-            ${if_match "${battery_percent BAT1}"<="10"}"\#C73200"${else}
-                "\#9933CC"
-            ${endif}
-    },
-${endif}
-
+${if_existing /sys/class/power_supply/BAT1} \
+    { \
+        "full_text" : " ${battery_short BAT1} ${battery_time BAT1}" , "color" : \
+            ${if_match " ${battery_percent BAT1}"<="10"}"\#C73200"${else} \
+                "\#9933CC" \
+            ${endif} \
+    }, \
+${endif} \
 # Show Date and Time
-{
-    "full_text" : "${time %a %d-%b-%Y} ${time %H:%M:%S}"
-}
-
+{ \
+    "full_text" : "${time %a %d-%b-%Y} ${time %H:%M:%S}" \
+} \
 ],
