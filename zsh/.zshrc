@@ -55,20 +55,37 @@ plugins=(git sudo zsh-syntax-highlighting ssh-agent)
 
 # User configuration
 
-#Set Rubygems and my ~/bin directory
-export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin:$HOME/bin"
+# Set ~/bin directory
+export PATH="$PATH:$HOME/bin"
 
 # Latex configuration
-
 # export PATH="$PATH:/opt/texlive/2014/bin/x86_64-linux"
 # export INFOPATH="$INFOPATH:/opt/texlive/2014/texmf-dist/doc/info"
 # export MANPATH="$MANPATH:/opt/texlive/2014/texmf-dist/doc/man"
 
-#Tomcat configuration
+# Tomcat configuration
 export CATALINA_HOME=/var/lib/apache-tomcat-8.0.18/
 export CATALINA_BASE=/var/lib/apache-tomcat-8.0.18/
 
 source $ZSH/oh-my-zsh.sh
+
+# Preferred stuff
+export EDITOR=vim
+export BROWSER=firefox
+
+# Coloured Man-pages
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;40;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
