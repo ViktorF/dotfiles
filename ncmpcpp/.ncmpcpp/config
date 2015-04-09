@@ -12,7 +12,7 @@
 ## file which defines that while launching ncmpcpp.
 ##
 #
-ncmpcpp_directory = ~/.ncmpcpp
+#ncmpcpp_directory = ~/.ncmpcpp
 #
 ##
 ## Directory for storing downloaded lyrics. It
@@ -24,7 +24,7 @@ ncmpcpp_directory = ~/.ncmpcpp
 #
 ##### connection settings #####
 #
-mpd_host = localhost
+mpd_host = 10.0.0.53 
 #
 mpd_port = 6600
 #
@@ -32,7 +32,7 @@ mpd_port = 6600
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = /media/western/Sonst/Lieder
+#mpd_music_dir = /media/western/Sonst/Lieder
 #
 #mpd_crossfade_time = 5
 #
@@ -44,15 +44,15 @@ mpd_music_dir = /media/western/Sonst/Lieder
 ## or 44100:16:2 for stereo visualization. Example
 ## configuration (it has to be put into mpd.conf):
 ##
-audio_output {
- type "fifo"
- name "Visualizer feed"
- path "/tmp/mpd.fifo"
- format "44100:16:2"
-}
+#audio_output {
+ #type "fifo"
+ #name "Visualizer feed"
+ #path "/tmp/mpd.fifo"
+ #format "44100:16:2"
+#}
 ##
 #
-visualizer_fifo_path = /tmp/mpd.fifo
+#visualizer_fifo_path = /tmp/mpd.fifo
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp
@@ -62,12 +62,12 @@ visualizer_fifo_path = /tmp/mpd.fifo
 ## are some problems with it.
 ##
 #
-visualizer_output_name = "FIFO" 
+#visualizer_output_name = "FIFO" 
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-visualizer_in_stereo = yes
+#visualizer_in_stereo = yes
 #
 ##
 ## Multiply received samples by given value. Very
@@ -83,7 +83,7 @@ visualizer_in_stereo = yes
 ## Keep in mind that sane values start with >=10.
 ##
 #
-visualizer_sync_interval = 30
+#visualizer_sync_interval = 30
 #
 ##
 ## Note: To enable spectrum frequency visualization
@@ -92,9 +92,9 @@ visualizer_sync_interval = 30
 #
 ## Available values: spectrum, wave.
 ##
-visualizer_type = spectrum 
+#visualizer_type = spectrum 
 #
-visualizer_look = ●▮
+#visualizer_look = ●▮
 #
 ##### system encoding #####
 ##
