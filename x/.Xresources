@@ -1,6 +1,3 @@
-URxvt*font:             xft:Inconsolata:size=11
-!URxvt*font:             xft:Droid Sans Mono:size=10
-URxvt.letterSpace: -1
 URxvt*termName:         rxvt
 URxvt*scrollBar:        false
 URxvt.transparent:    false
@@ -21,12 +18,6 @@ URxvt.keysym.M-u:     perl:url-select:select_next
 URxvt.url-launcher:   /usr/bin/firefox
 URxvt.underlineURLs:  True
 URxvt*matcher.button:   1
-URxvt.keysym.M-Escape:perl:keyboard-select:activate
-URxvt.keysym.M-c:     perl:clipboard:copy
-URxvt.keysym.M-v:     perl:clipboard:paste
-URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
-URxvt.clipboard.copycmd:  xclip -i -selection clipboard
-URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.colorUL: #666666
 
 URxvt.tabbed.tabbar-fg: 0

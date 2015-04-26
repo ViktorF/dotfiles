@@ -63,7 +63,7 @@ bindsym $mod+m exec ~/.i3/xkcd_i3lock.py
 
 # Start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec urxvtc -fn 'xft:Courier'
 
 # kill focused window
 bindsym $mod+Shift+q kill
