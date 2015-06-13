@@ -52,6 +52,9 @@ bindsym XF86AudioMute exec ponymix toggle
 # Take a screenshot when pressing right Alt and modifier
 bindsym $mod+Alt_R exec maim
 
+# Execute my script to connect to remote mpd server
+bindsym $mod+p exec nmpc.sh
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
