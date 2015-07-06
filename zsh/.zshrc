@@ -73,6 +73,10 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 export BROWSER=firefox
 
+# Puush API KEY to upload to puush.me
+export PUUSH_API_KEY="70F4976391A9BCB16168014B5C3FBCD9"
+
+
 # Coloured Man-pages
 man() {
     env \
