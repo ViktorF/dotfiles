@@ -10,10 +10,10 @@
 set $mod Mod4
 
 # Fancy names for workspaces
-set $w1 1: chat
-set $w2 2
+set $w1 1
+set $w2 2: steam
 set $w3 3: www
-set $w4 4
+set $w4 4: chat
 set $w5 5
 set $w6 6
 set $w7 7
@@ -59,8 +59,9 @@ bindsym $mod+p exec nmpc.sh
 floating_modifier $mod
 
 # Assign section
+assign [class="^Steam"] → $w2
 assign [class="^Firefox$"] → $w3
-assign [class="^Pidgin"] → $w1
+assign [class="^Pidgin"] → $w4
 
 #Lock screen using i3lock and show random xkcd image
 bindsym $mod+m exec ~/.i3/xkcd_i3lock.py
@@ -149,16 +150,16 @@ bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+6 move container to workspace $w6
+bindsym $mod+Shift+7 move container to workspace $w7
+bindsym $mod+Shift+8 move container to workspace $w8
+bindsym $mod+Shift+9 move container to workspace $w9
+bindsym $mod+Shift+0 move container to workspace $10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
