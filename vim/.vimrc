@@ -97,6 +97,9 @@ set tabstop=4
 "set lbr
 "set tw=500
 
+"Disable auto commenting next line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
