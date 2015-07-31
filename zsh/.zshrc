@@ -29,7 +29,7 @@ ZSH_THEME="gentoo"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -64,14 +64,14 @@ export PATH="$PATH:$HOME/bin"
 # export MANPATH="$MANPATH:/opt/texlive/2014/texmf-dist/doc/man"
 
 # Tomcat configuration
-export CATALINA_HOME=/var/lib/apache-tomcat-8.0.18/
-export CATALINA_BASE=/var/lib/apache-tomcat-8.0.18/
+export CATALINA_HOME="/var/lib/apache-tomcat-8.0.18/"
+export CATALINA_BASE="/var/lib/apache-tomcat-8.0.18/"
 
 source $ZSH/oh-my-zsh.sh
 
 # Preferred stuff
-export EDITOR=vim
-export BROWSER=firefox
+export EDITOR='vim'
+export BROWSER='firefox-nightly'
 
 # Puush API KEY to upload to puush.me
 export PUUSH_API_KEY="70F4976391A9BCB16168014B5C3FBCD9"
@@ -115,9 +115,13 @@ zstyle :omz:plugins:ssh-agent identities id_rsa
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 
 # I am lazy so i don't want to type sudo before shutdown/reboot/....
 alias reboot="sudo reboot"
 alias poweroff="sudo poweroff"
 alias zzz="sudo zzz"
 alias ZZZ="sudo ZZZ"
+
+# MPD daemon start (if no other user instance exists)
+[ ! -s ~/.config/mpd/pid ] && mpd
