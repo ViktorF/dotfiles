@@ -70,7 +70,7 @@ plugins=(git sudo zsh-syntax-highlighting ssh-agent)
 # User configuration
 
 # Set ~/bin directory
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/lib/ccache/bin/:$HOME/bin"
 
 # Latex configuration
 # export PATH="$PATH:/opt/texlive/2014/bin/x86_64-linux"
@@ -120,6 +120,8 @@ man() {
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 zstyle :omz:plugins:ssh-agent identities id_rsa
+
+export DISPLAY=":0"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
