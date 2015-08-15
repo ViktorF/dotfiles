@@ -133,6 +133,9 @@ export DISPLAY=":0"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 
+#emulte xbox controller from ps3 controller
+alias ps3e="sudo xboxdrv --silent --detach-kernel-driver"
+
 # I am lazy so i don't want to type sudo before shutdown/reboot/....
 alias reboot="sudo reboot"
 alias poweroff="sudo poweroff"
