@@ -82,7 +82,7 @@ ${endif} \
 }, \
 # Show sound volume (using ponymix) and artist - track
 { \
-    "full_text" : "  ${exec ponymix get-volume}% ${scroll 25 3 ${mpd_artist} - ${mpd_title}}" , "color" : "\#E57C25" \
+    "full_text" : "  ${exec ponymix get-volume}% ${scroll 30 3 ${mpd_smart}}" , "color" : "\#E57C25" \
 }, \
 # Show battery status for BAT1 (mode percentage remaining_time)
 ${if_existing /sys/class/power_supply/BAT1} \
