@@ -24,6 +24,10 @@ source /etc/profile
 # time that oh-my-zsh is loaded.
 ZSH_THEME="gentoo"
 
+# Base16 Shell
+BASE16_SHELL="$HOME/base16-flat.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # Set default username
 # DEFAULT_USER="martin"
 
